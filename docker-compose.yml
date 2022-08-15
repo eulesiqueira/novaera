@@ -1,0 +1,19 @@
+version: '2'
+networks:
+  local:
+    external:
+      name: net-srvpdv
+services:
+  srvpdv:
+    container_name: loja10h
+    image: eulecs/mnesrvpdv:12.28.1.0-1
+    networks:
+      local:
+        ipv4_address: 192.168.1.11
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /usr/share/zoneinfo/America/Manaus:/etc/timezone
+#      - /vol/certificado:/usr/socin/econect/conc/certificado
+#      - /vol/logs/Loja16:/usr/socin/econect/conc/log/
+#      - /vol/bd/Loja16:/var/lib/mysql
+#      - /vol/movimento/Loja16:/usr/socin/econect/conc/movimento
