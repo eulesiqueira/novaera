@@ -1,5 +1,5 @@
 version: '2'
 services:
   srvpdv:
-    container_name: loja10h
+    container_name: loja10h2
     image: ubuntu:latest
